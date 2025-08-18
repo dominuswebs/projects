@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="pub-id" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title">Japanese Beginner 1</dc:title>
+    <dc:creator id="creator">Hugo</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:identifier id="pub-id">hugo-001</dc:identifier>
+    <dc:source>hugo</dc:source>
+    <meta property="dcterms:modified">2013-09-16T07:58:19Z</meta>
+    <dc:date>2022</dc:date>
+    <dc:publisher>not published</dc:publisher>
+    <dc:contributor id="contrib1">Creative Commons, Attribution-No Derivative Works 3.0 License</dc:contributor>
+    <dc:rights>Only lefts</dc:rights>
+    <dc:description></dc:description>
+    <dc:subject>Japanese</dc:subject>
+    <dc:type>Beginner</dc:type>
+	<meta property="rendition:layout">reflowable</meta>
+	<meta property="rendition:orientation">auto</meta>
+	<meta property="rendition:spread">auto</meta>
+</metadata>
+<manifest>
+    <item id="toc" properties="nav" href="TOC.xhtml" media-type="application/xhtml+xml" />
+    <item id="grammar" href="grammar.xhtml" media-type="application/xhtml+xml" />
+
+</manifest>
+<spine page-progression-direction="ltr">
+    <itemref idref="grammar" linear="yes" />
+</spine>
+</package>

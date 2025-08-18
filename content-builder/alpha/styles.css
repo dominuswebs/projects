@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.drop-area {
+  flex: 3;
+  border: 2px dashed #999;
+  padding: 10px;
+  overflow: auto;
+}
+
+#palette {
+  flex: 1;
+  border-left: 2px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.draggable {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  cursor: grab;
+  text-align: center;
+}
+
+.component {
+    min-width: 50px;
+  background-color: red;
+  color: white;
+}
+
+.group {
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+
+}
+
+.canvas {
+  flex: 3;
+  border: 2px dashed #999;
+  padding: 10px;
+  overflow: auto;
+  position: relative; /* Important for absolute children */
+}
+
+.group.dropped {
+    display: grid;
+    grid-auto-flow: column;    /* Place items side by side */
+    width: fit-content;
+    border: 2px dashed blue;
+    background-color: transparent;  
+}

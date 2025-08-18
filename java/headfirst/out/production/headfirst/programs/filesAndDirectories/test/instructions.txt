@@ -1,0 +1,2 @@
+Suppose you wanted to make an installer program to install your killer app. You start with the directory
+and files on the left, and want to end up with the directory structure and files on the right.

@@ -1,0 +1,66 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.drop-area {
+  flex: 3;
+  border: 2px dashed #999;
+  padding: 10px;
+  overflow: auto;
+}
+
+.sidebar {
+  flex: 1;
+  border-left: 2px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.draggable {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  cursor: grab;
+  text-align: center;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+}
+
+.group {
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+}
+
+.group-container {
+  border: 1px solid #2196f3;
+  margin: 5px;
+  padding: 5px;
+  background: #e3f2fd;
+}
+
+.drop-area {
+  flex: 3;
+  border: 2px dashed #999;
+  padding: 10px;
+  overflow: auto;
+  position: relative; /* Important for absolute children */
+}
+.square {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  position: absolute; /* Will be positioned on drop */
+  cursor: grab;
+}

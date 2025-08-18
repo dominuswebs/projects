@@ -1,0 +1,22 @@
+<p id="p1" draggable="true">This element is draggable.</p>
+<div id="target">Drop Zone</div>
+<script>
+    const source = document.getElementById("p1");
+    const target = document.getElementById("target");
+
+    source.addEventListener("dragstart", (ev) => {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("application/my-app", ev.target.id);
+    ev.dataTransfer.effectAllowed = "move";
+    });
+    target.addEventListener("dragover", (ev) => {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+    });
+    target.addEventListener("drop", (ev) => {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("application/my-app");
+    ev.target.appendChild(document.getElementById(data));
+    });
+</script>

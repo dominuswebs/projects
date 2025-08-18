@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        "0 - My Stuff",
+        "1 - bottle",
+        "2 - dog",
+        "3 - guessing game",
+        "4 - good dog",
+        "5 - Battleship",
+        "examples",
+        "examples/programs"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}
