@@ -23,10 +23,15 @@
 
         docker run -it -p [host-port]:[container-port] [image-name]
 
-    Container ids are long strings 3e1da2944b28b5b1027d211ac21cebe4fc3ddec34504634b69db237d60252610 but docker is smart enough to choose
-    the correct id if we provide a few starting characters so in this case 3e1da would be enough to id that container.
+    Container ids are long strings 3e1da2944b28b5b1027d211ac21cebe4fc3ddec34504634b69db237d60252610 but docker is smart enough to choose the correct id if we provide a few starting characters so in this case 3e1da would be enough to id that container.
+
+    All the container settings need to be set during the creation of the container, either by using the create or run commands.
 
 # Docker commands
+
+    Create a container
+
+        docker container create -it [image-name]
 
     Run a container
 
@@ -89,6 +94,22 @@
 
         rename - docker container rename [current_name] [new_name]
 
+    Volumes
+
+        Mapping 
+
+            [path/in/host/machine] : [path/inside/container]
+
+            The colon (:) in Docker volume mappings defines a bind mount — it tells Docker to mount a file or directory from your host into the container.
+
+            example:
+
+                ./default.conf:/etc/nginx/conf.d/default.conf
+
+                Does:
+
+                Mount the local file default.conf into the container at /etc/nginx/conf.d/default.conf, overwriting whatever’s there.
+
 
 # Useful containers
 
@@ -100,3 +121,21 @@
 
             docker run -d -p 8888:80 nginx
 
+
+# Common errors
+
+    Permission denied (error 13)
+
+        Your user doesn’t have permission to access the Docker daemon (i.e. to run Docker commands).
+
+            This usually happens because:
+
+                You're trying to run Docker without root privileges
+
+                You're not in the docker group
+        
+        OR
+
+        Docker cannot access a file or folder on your host system (likely in your bind mount).
+
+        This is often due to file permissions, especially on Linux or WSL2.
