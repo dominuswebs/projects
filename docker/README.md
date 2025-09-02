@@ -59,6 +59,12 @@
 
             docker rm $(docker container ls -aq)
 
+    Delete a container automatically
+
+        Use --rm flag when running the container. Will deleted once the container stops.
+
+            docker run -it --rm ubuntu
+
     Running a container in the background
 
         A container is only kept alive as long as its main process is running.
@@ -71,6 +77,32 @@
 
         docker logs [container_id or name]
 
+    How to launch programs in containers
+
+        Most images specify a program that will be launched by default
+
+            Example: ubuntu image starts bash
+        
+        To change default we can specify the command:
+
+            docker container run [options] [image] [command]
+
+        If a container is running, we can launch additional programs
+
+            docker container exec [options] [container_id or name] [command]
+
+            Example, we start an nginx container but we want to install php as well
+
+            First we start the nginx container
+
+                docker run -it --name my-server nginx
+
+            Then in another terminal we run
+
+                docker container exec my-server apt install php
+
+            Then we can go back to the first terminal and php will be installed in that container.
+
     Commands
 
         run - docker [container] run ...
@@ -81,6 +113,7 @@
             --name: set the container name
             -d or --detach: detached mode
             -f: force
+            --rm: automatically delete the container once it stops
 
         ls - docker container ls ...
 
