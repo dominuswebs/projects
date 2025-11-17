@@ -1,0 +1,86 @@
+# functions
+
+# PHP 8.x
+
+function definition
+
+function function_name ( int[type hinting] $param, $optional_param = "default", ...$variadic[variable number of arguments can be passed] ) : int [optional return type]
+
+    [type hinting] You can specify the expected type of arguments passed to a function. If an argument of a different type is provided, PHP will issue a TypeError.
+
+    [optional return type] You can specify the return type of a function.
+
+function calling
+
+function_name(required:"value") [named arguments]
+
+    [named arguments] 
+
+        Improved Readability: The code becomes more self-documenting as the purpose of each argument is clear from its name.
+        Order Independence: You are no longer restricted by the order of parameters in the function definition.
+        Skipping Default Values: You can easily pass only the arguments you need to change, while others with default values are automatically handled.
+        Easier Maintenance: When refactoring or updating function signatures, named arguments can reduce the impact on existing function calls.
+
+arrow function
+
+    fn(...[optional arguments]) => expression [just the one]; [implicit return]
+
+    Arrow functions support the same features as anonymous functions, 
+    except that using variables from the parent scope is always automatic.
+
+# types
+
+     You can declare a type as nullable by prefixing a ? sign to the type. 
+     For example, if a certain property can be a string or a null, you can declare it as ?string. 
+     With PHP 8.0 Union Types, string|null will be functionally equivalent to ?string.
+
+    PHP 8.0 comes with support for Union Types.
+    You can declare more than one type for arguments, return types, and class properties.
+
+    class Example {
+        private int|float $foo;
+        public function squareAndAdd(float|int $bar): int|float {
+            return $bar ** 2 + $foo;
+        }
+    }
+
+    iterable type
+
+    There is also the `iterable` pseudo-type that is functionally equivalent to array|Traversable.
+
+    Class type
+
+    Class names can be used as types.
+
+    Type variance
+    
+    Union type variance follows LSP. This is to ensure that all sub classes and implementations of the interface must not change the behavior of the program and still adhere to the contract. 
+    This is enforced in PHP even without Union types.
+
+    Parameter are contra-variant: Types can be widened with a super type.
+
+        Return types are covariant: Types can be restricted to a sub type.
+        Property types invariant: Types cannot be changed to a sub or super type.
+        Adding or removing types to a Union
+
+    class A{
+        public function foo(string|int $foo): string|int {}
+    }
+    class B extends A{
+        public function foo(string|int|float $foo): string {}
+    }
+
+    In the snippet above, parameter types are widened (with the addition of float type). 
+    This is allowed because all programs that use class B expect them to accept all types class A accepts. 
+    Class B still fulfills this contract.
+
+    If you were to change the type in a way that class B does not fulfill the contract, this will trigger a fatal error:
+
+    class A{
+        public function foo(string|int $foo): string|int {}
+    }
+    class B extends A{
+        public function foo(string|float $foo): string|int {}
+    }
+
+    Fatal error: Declaration of B::foo(string|float $foo): string|int must be compatible with A::foo(string|int $foo): string|int in ... on line ...    
