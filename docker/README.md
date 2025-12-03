@@ -154,6 +154,20 @@
 
             docker run -d -p 8888:80 nginx
 
+        In detached mode we can run programs in that container
+
+            docker container exec [options] [container_id or name] [program]
+
+        running bash
+
+            docker container exec -it my_container bash
+
+        installing programs while running bash
+
+            apt update 
+
+            apt install [program] 
+
 
 # Common errors
 
