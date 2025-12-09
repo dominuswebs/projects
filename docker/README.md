@@ -143,6 +143,12 @@
 
                 Mount the local file default.conf into the container at /etc/nginx/conf.d/default.conf, overwriting whatever’s there.
 
+    Info
+
+        To display info about the client and server running on the host
+
+        docker info 
+
 
 # Useful containers
 
@@ -186,3 +192,5 @@
         Docker cannot access a file or folder on your host system (likely in your bind mount).
 
         This is often due to file permissions, especially on Linux or WSL2.
+
+
