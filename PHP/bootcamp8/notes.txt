@@ -83,4 +83,55 @@ arrow function
         public function foo(string|float $foo): string|int {}
     }
 
-    Fatal error: Declaration of B::foo(string|float $foo): string|int must be compatible with A::foo(string|int $foo): string|int in ... on line ...    
+    Fatal error: Declaration of B::foo(string|float $foo): string|int must be compatible with A::foo(string|int $foo): string|int in ... on line ...
+
+string interpolation
+
+    In PHP, using curly braces {} within double quotes " is a feature called complex (curly) syntax for string interpolation. 
+    It helps the interpreter correctly identify and parse variables, array elements, and object properties within the string, 
+    especially when the variable name is immediately followed by characters that could otherwise be mistaken as part of the name.
+
+    ex:
+
+        $type = "apple";
+        echo "I like {$type}s"; // Outputs: I like apples
+        // Without braces, PHP looks for $types, which might not be defined:
+        // echo "I like $types"; // Outputs: I like 
+
+
+OOP
+
+    Abstract vs interface
+
+    In PHP, an abstract class is a base class that can have both defined methods and abstract methods, providing shared code and a common template for related classes. 
+    An interface, on the other hand, is a pure contract that only defines method signatures (without implementation), which unrelated classes can implement to guarantee specific behaviors. 
+
+
+        Key Differences
+        
+        Feature 	            Abstract Class	                                                                    Interface
+        Method Implementation	Can contain both abstract (no body) and concrete (with body) methods.	            Can only declare method signatures (no body).
+        Inheritance	            A class can extend only one abstract class due to single inheritance.	            A class can implement multiple interfaces.
+        Properties & Constants	Can have properties (instance variables) and constants.	                            Can only have constants, not instance properties.
+        Access Modifiers	    Methods and properties can have public, protected, or private access modifiers.	    All methods must be public.
+        Purpose	                Used for closely related classes that share a common base implementation 	        Used to define a common behavior or "contract" for potentially unrelated classes 
+                                and state ("is a" relationship).                                                    ("acts like" or "can do" relationship).
+
+    When to Use Which
+
+        Use an abstract class when:
+            
+            You want to share a common base implementation among closely related classes.
+            Classes extending the abstract class will have many similar methods and properties.
+            You need to define fields (state) that all subclasses can access and modify.
+
+        Use an interface when:
+
+            You want to define a contract that multiple, possibly unrelated, classes must follow.
+            The implementing classes will have entirely different implementations of the required methods.
+            A class needs to adopt multiple behaviors, which is only possible through multiple interface implementation 
+            (as PHP only supports single class inheritance). 
+            A common design pattern involves creating an interface to define a contract and then using an abstract class 
+            to provide a default or partial implementation of that interface, which subclasses can then extend. 
+
+
