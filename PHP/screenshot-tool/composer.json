@@ -1,0 +1,12 @@
+{
+    "name": "hugopaz/screenshot-tool",
+    "authors": [
+        {
+            "name": "Hugo Paz",
+            "email": "dominuswebs@gmail.com"
+        }
+    ],
+    "require": {
+        "chrome-php/chrome": "^1.15"
+    }
+}
