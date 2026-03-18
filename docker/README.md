@@ -27,6 +27,24 @@
 
     All the container settings need to be set during the creation of the container, either by using the create or run commands.
 
+    Docker will not re-launch a container by default ( VM reboot ). Once it stops it will remain stopped. For a web server we want it to start automatically and restart it on failure. For that we need to set the restart policy:
+
+        on-failure[:max-retries]
+            - only on error, can't detect all failures - if the main process is still running this will not trigger
+        always
+            - container should always be restarted unless we stop it manually, then it only starts again on the next launch of Docker Deamon or if we start it manually.
+        unless-stopped
+            - similar to above but it wont start again even in the next launch of docker deamon
+
+    We use these flags when starting a new container - examples in Docker Commands section - restart policy
+
+    In Docker commands, using an equals sign (=) in a flag (e.g., --key=value) serves as a explicit separator between an argument name (the flag) and its value. 
+    It is used to assign values to configurations, labels, environment variables, or build arguments.
+
+        Example:
+
+            docker update --restart unless-stopped [container-id / container-name] is the same as docker update --restart=unless-stopped [container-id / container-name]
+
 # Docker commands
 
     Create a container
@@ -36,6 +54,8 @@
     Run a container
 
         docker run -it -p [host-port]:[container-port] [image-name]
+
+        docker run ... is a shorthand for docker container create ... and docker container start ... 
 
     List running containers
 
@@ -72,6 +92,20 @@
         This main process needs to keep running or the container will stop.
 
         docker run -d -p [host-port]:[container-port] [image-name]
+
+    Setting a container restart policy 
+
+        --restart [restart policy]
+
+        New container
+
+            docker run -d --restart unless-stopped [image-name]
+
+        Existing containeer
+
+            docker [container] update --restart unless-stopped [container-id / container-name]
+
+            Updating the restart policy on a stopped container will not start it again. We need to do it manually.
     
     To show logs
 
