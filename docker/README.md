@@ -206,7 +206,47 @@
 
             apt update 
 
-            apt install [program] 
+            apt install [program]
+
+# Manage Files within a Container
+
+    How are files stored in a container
+
+        All files are stored directly in the container. They are stored in the writable layer of the container.
+
+            For example we spin an ubuntu container and then run apt update / upgrade. The package data is downloaded and is written into the writable layer of the container. 
+
+        This allows the images to be read-only. If you delete the container, all the data is lost but the image can still
+        be used to create a new container.
+
+    Copying files into / out of a container
+
+        docker cp
+
+        copy into a container
+
+            docker cp [host-file/folder] [container-name/id]:[container-directory]
+
+                example - updating the index.html in nginx container
+
+                    docker cp host/path/to/index.html [container name/id]:/usr/share/nginx/html/
+
+        copy data from a container into the host
+
+            docker cp [container-name/id]:[container-directory] [host-file/folder]
+        
+        The docker cp command works even when the container is not running.
+
+
+    
+    Enable the container to use the host's filesystem
+
+        Bind mounts
+
+    Bind mounts vs Copy files
+
+    What -v does
+
 
 
 # Common errors
@@ -228,3 +268,25 @@
         This is often due to file permissions, especially on Linux or WSL2.
 
 
+    Error response from daemon: cannot start/stop container: xxxxxx: permission denied
+
+        Check if AppArmor is the culprit.
+
+            sudo aa-status
+
+        sudo aa-remove-unknown allows us to stop the containers but the issue will return
+
+        We can also disable/remove the application
+
+            disable
+
+                sudo systemctl disable apparmor.service --now
+                sudo service apparmor teardown
+
+            remove
+
+                sudo apt-get purge --auto-remove apparmor
+
+                sudo service docker restart
+
+                docker system prune --all --volumes
