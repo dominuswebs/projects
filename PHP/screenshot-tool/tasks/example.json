@@ -1,0 +1,15 @@
+[
+    {
+        "id":"randomlyGenerted",
+        "details": {
+            "task":"print/pdf/etc",
+            "parameters": {
+                "channels":[],
+                "dayparts":[],
+                "tags":[]
+            }
+        },
+        "status":"queued/active/complete/failed",
+        "created":"date"
+    }
+]
