@@ -219,7 +219,7 @@
         This allows the images to be read-only. If you delete the container, all the data is lost but the image can still
         be used to create a new container.
 
-    Copying files into / out of a container
+  ## Copying files into / out of a container
 
         docker cp
 
@@ -227,9 +227,13 @@
 
             docker cp [host-file/folder] [container-name/id]:[container-directory]
 
-                example - updating the index.html in nginx container
+                example 1 - updating the index.html in nginx container
 
                     docker cp host/path/to/index.html [container name/id]:/usr/share/nginx/html/
+
+                example 2 - copy current folder to a new folder in the container
+
+                    docker cp . [container-name/id]:/new-folder
 
         copy data from a container into the host
 
@@ -238,16 +242,38 @@
         The docker cp command works even when the container is not running.
 
 
+
+  ## Bind mounts
     
+    Maps a directory inside the container to a directory on the host's local file system.
+
     Enable the container to use the host's filesystem
 
-        Bind mounts
+    ATTENTION: 
+    
+    We can bind a host folder to any folder in the container, even ones that would lead to the container failing - /etc for example 
 
-    Bind mounts vs Copy files
+    Docker mounts our host folder on top of that path inside the container. The original files are still in the image layer, but:
 
-    What -v does
+        - they’re inaccessible while the mount exists
+        
+        - they come back if the container is recreated without the mount
+    
+    We cannot remove or edit the bind mount. Bind mounts are fixed at container creation time. So we need to recreate the container with different options.
 
+    Defining a bind mount
 
+        Example 1
+
+            --mount type=bind,source=[host-path],destination=[container-path]
+
+                host path: /home/hugo/workspace/projects/repo/projects/docker
+
+                container path: /usr/share/nginx/html
+
+  ## Volumes
+
+    
 
 # Common errors
 
