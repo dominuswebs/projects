@@ -271,6 +271,11 @@
 
                 container path: /usr/share/nginx/html
 
+                entire command ( without port ):
+                
+                    docker run -it --mount type=bind,sou
+rce=/home/hugo/workspace/projects/repo/projects/docker/bind,destination=/usr/share/nginx/html nginx bash
+
   ## Volumes
 
     
