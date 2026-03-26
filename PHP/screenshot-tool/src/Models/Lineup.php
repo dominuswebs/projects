@@ -38,9 +38,6 @@ $imagesForBrowser = [
     "screenshots/bar3.png"
 ];
 
-// $html = renderTemplate($configuration, $imagesForBrowser);
-// echo $html;
-
 // mpdf doesnt do flex or grid
 $html = renderTemplate($configuration, $imagesForPDF);
 $mpdf->WriteHTML($html);
@@ -48,6 +45,8 @@ $mpdf->WriteHTML($html);
 // Output the PDF to the browser for inline viewing or force a download
 // 'I' sends the file inline to the browser (default)
 // 'D' sends to the browser and forces a file download
+// 'F' saves the file on the server
+
 $mpdf->Output('my_document.pdf', \Mpdf\Output\Destination::INLINE);
 
 function renderTemplate(string $configuration, array $images = []): string
