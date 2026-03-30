@@ -45,6 +45,29 @@
 
             docker update --restart unless-stopped [container-id / container-name] is the same as docker update --restart=unless-stopped [container-id / container-name]
 
+    Docker containers don’t magically run services — they run whatever process we tell them to.
+
+        examples:
+
+            docker run -it -p 3000:80 nginx
+
+                This starts the default NGINX process
+                Nginx runs in the foreground (daemon off;)
+                It binds to port 80 inside the container
+
+            docker run -it -p 3000:80 nginx bash
+
+                Instead of starting nginx we start bash
+                No web server is running
+                Nothing is listening on port 80
+                Docker still maps the port, but there's no process behind it
+                We need to start nginx manually
+
+        To avoid this we start the container and then use exec to run bash. This can be used by either running the container in detached mode ( -d ), so the shell is free, or
+        by using a different terminal window.
+
+
+
 # Docker commands
 
     Create a container
@@ -234,6 +257,12 @@
                 example 2 - copy current folder to a new folder in the container
 
                     docker cp . [container-name/id]:/new-folder
+                
+                example 3 - copy the contents of a folder to a folder in the container
+
+                    docker cp /path/to/folder/. [container-name/id]:/path/in/container
+
+                    if we omit . the entire source directory will be copied to the directory in the container. In this case [folder] would be copied into [container] and not its contents. 
 
         copy data from a container into the host
 
@@ -261,6 +290,8 @@
     
     We cannot remove or edit the bind mount. Bind mounts are fixed at container creation time. So we need to recreate the container with different options.
 
+    By default bind mounts allow the container to write into them, meaning that if we run rm filename in the container, it is gone from the host.
+
     Defining a bind mount
 
         Example 1
@@ -273,12 +304,48 @@
 
                 entire command ( without port ):
                 
-                    docker run -it --mount type=bind,sou
-rce=/home/hugo/workspace/projects/repo/projects/docker/bind,destination=/usr/share/nginx/html nginx bash
+                    docker run -it --mount type=bind,source=/home/hugo/workspace/projects/repo/projects/docker/bind,destination=/usr/share/nginx/html nginx bash
+
+                we can use shell expansion to simplify it by using "$(pwd)" for the source - $() -> command substitution - replaces the command, in this case pwd, with its output - "" are used to include any white spaces
+
+                    docker run -it --mount type=bind,source="$(pwd)",destination=/usr/share/nginx/html nginx bash
+
+        Example 2 - using -v / --volume
+
+            We need to us an absolute path to the local directory. if we use just . (current directory), -v will understand it as a volume mount
+            If the directory does not exist on the host, -v will create it
+
+                ... -v [host-path]:[container-path] ...
+
+                    docker run -it -v "$(pwd)":/app python bash
+
+        Defining Read Only bind mount
+
+            using -v - add :ro 
+
+                ... -v [host path]:[container path]:ro
+
+            using --mount - add readonly
+
+                ... --mount type=bind,source=[host-path],destination=[container-path],readonly
+
 
   ## Volumes
 
-    
+# Copy vs Bind Mount
+
+    docker cp
+
+        Everything is in the container'swritable layer
+        Optimised by Docker for speed
+        Prefered in prod
+        Any updates need to be copied manually ( more explicit )
+
+    bind mount
+
+        very convenient during development
+        changes made in the host are automatically visible in the container
+        In prod creates a minor overhead - Docker needs to query the host for changes on any access.
 
 # Common errors
 
