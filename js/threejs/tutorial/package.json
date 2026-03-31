@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "three": "^0.183.2"
+    },
+    "scripts": {
+        "build": "esbuild app/main.js --bundle --minify --outfile=bundle.js"
+    }
+}
