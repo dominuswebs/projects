@@ -132,6 +132,13 @@ OOP
             A class needs to adopt multiple behaviors, which is only possible through multiple interface implementation 
             (as PHP only supports single class inheritance). 
             A common design pattern involves creating an interface to define a contract and then using an abstract class 
-            to provide a default or partial implementation of that interface, which subclasses can then extend. 
+            to provide a default or partial implementation of that interface, which subclasses can then extend.
+
+MVC
+
+
+    Controller → validates request input (e.g., user sent at least one item)
+    
+    Model / service → enforces business rules (never trust callers)
 
 
