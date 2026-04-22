@@ -1,4 +1,14 @@
 <?php
+// rewrite like this?
+// [
+//     path:{
+//         path:[
+//             {file},
+//             {file}
+//         ]
+//     }
+// ]
+
 
 function processAssets(string $root): array
 {
