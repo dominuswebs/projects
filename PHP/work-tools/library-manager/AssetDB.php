@@ -14,11 +14,11 @@ class AssetDB
         if(file_exists($this->file)) {
             copy($this->file, $this->file_backup);
         }
-        
+
         file_put_contents($this->file, json_encode($data, JSON_PRETTY_PRINT));
     }
 
-    public function loadDB(): array
+    public function readDB(): array
     {
         return json_decode(file_get_contents($this->file), true);
     }

@@ -1,6 +1,6 @@
 <?php
 
-function processFiles(string $root): void
+function processAssets(string $root): array
 {
     // Create a recursive directory iterator
     $directory = new RecursiveDirectoryIterator($root, RecursiveDirectoryIterator::SKIP_DOTS);
@@ -21,8 +21,5 @@ function processFiles(string $root): void
             ];
         }
     }
-
-    echo "<pre>";
-    print_r($assets);
-    echo "</pre>";
+    return $assets;
 }

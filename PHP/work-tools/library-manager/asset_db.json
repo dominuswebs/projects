@@ -1,4 +1,398 @@
 [
-    "a",
-    "b"
+    {
+        "filename": "NA104_Original-Crispy-Bacon-Stacker.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA104_Original-Crispy-Bacon-Stacker.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30691-0_Zinger-Combo-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30691-0_Zinger-Combo-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-31293-0_Zinger-Bacon-Cheese-Combo.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-31293-0_Zinger-Bacon-Cheese-Combo.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "NA105_Original-Crispy-Burger.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA105_Original-Crispy-Burger.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "NA113_Original-Crispy-Bacon-Cheese-Burger-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA113_Original-Crispy-Bacon-Cheese-Burger-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30691-0_Zinger-Combo.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30691-0_Zinger-Combo.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "NA104_Original-Crispy-Bacon-Stacker-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA104_Original-Crispy-Bacon-Stacker-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "NA113_Original-Crispy-Bacon-Cheese-Burger.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA113_Original-Crispy-Bacon-Cheese-Burger.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30730_Double-Tender-Combo-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30730_Double-Tender-Combo-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30730_Double-Tender-Combo.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30730_Double-Tender-Combo.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-31900-0_Zinger-Crunch-Burger-Combo.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-31900-0_Zinger-Crunch-Burger-Combo.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30696-0_Zinger-Stacker-Combo-No-Chillis-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30696-0_Zinger-Stacker-Combo-No-Chillis-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-31900-0_Zinger-Crunch-Burger-Combo-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-31900-0_Zinger-Crunch-Burger-Combo-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30696-0_Zinger-Stacker-Combo.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30696-0_Zinger-Stacker-Combo.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-31293-0_Zinger-Bacon-Cheese-Combo-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-31293-0_Zinger-Bacon-Cheese-Combo-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30696-0_Zinger-Stacker-Combo-No-Chillis.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30696-0_Zinger-Stacker-Combo-No-Chillis.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "I-30696-0_Zinger-Stacker-Combo-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/I-30696-0_Zinger-Stacker-Combo-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "NA105_Original-Crispy-Burger-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/burgers\/NA105_Original-Crispy-Burger-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "burgers"
+    },
+    {
+        "filename": "Lunchboxes_4PL_2.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/lunchboxes\/Lunchboxes_4PL_2.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/lunchboxes"
+    },
+    {
+        "filename": "Lunchboxes_4PL_1.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/lunchboxes\/Lunchboxes_4PL_1.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/lunchboxes"
+    },
+    {
+        "filename": "Lunchboxes_4PL_3.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/lunchboxes\/Lunchboxes_4PL_3.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/lunchboxes"
+    },
+    {
+        "filename": "Lunchboxes_4PL_4.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/lunchboxes\/Lunchboxes_4PL_4.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/lunchboxes"
+    },
+    {
+        "filename": "tower_5PP4.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_5PP4.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_3PL2.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_3PL2.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_3PL1.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_3PL1.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_5PP2.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_5PP2.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_4PL2.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_4PL2.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_4PL4.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_4PL4.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_5PP3.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_5PP3.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_4PL1.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_4PL1.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_4PL3.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_4PL3.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_5PP1.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_5PP1.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_5PP5.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_5PP5.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "tower_3PL3.webm",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/takeovers\/tower\/tower_3PL3.webm",
+        "mime-type": "video\/webm",
+        "subdirectories": "takeovers\/tower"
+    },
+    {
+        "filename": "NA130_Original-Recipe-Chicken-3pcs.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA130_Original-Recipe-Chicken-3pcs.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30658_Wicked-Wings-6pk-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30658_Wicked-Wings-6pk-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30580_Original-Recipe-21pc-v1-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30580_Original-Recipe-21pc-v1-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA137_Luxe-Lunch-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA137_Luxe-Lunch-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-31962_ADDON-2-Original-Tenders.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-31962_ADDON-2-Original-Tenders.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30707_Original-Tenders-5pcs.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30707_Original-Tenders-5pcs.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-32174_ADDON-6pc-Hot-Crispy.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-32174_ADDON-6pc-Hot-Crispy.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30580_Original-Recipe-21pc-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30580_Original-Recipe-21pc-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-32170_Hot-Crispy-Boneless-3pcs-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-32170_Hot-Crispy-Boneless-3pcs-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30017_Wicked-Wings-3pc-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30017_Wicked-Wings-3pc-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30839_ADDON-4-pcs-Original-Recipe-Chicken.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30839_ADDON-4-pcs-Original-Recipe-Chicken.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-31766_ADDON-2-Hot-Crispy-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-31766_ADDON-2-Hot-Crispy-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA129_Hot-Crispy-Boneless-10pcs.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA129_Hot-Crispy-Boneless-10pcs.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA137_Luxe-Lunch.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA137_Luxe-Lunch.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA158_Luxe-Lunch-SBX.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA158_Luxe-Lunch-SBX.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-31766_ADDON-2pc-Hot-Crispy.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-31766_ADDON-2pc-Hot-Crispy.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30580_Original-Recipe-21pc.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30580_Original-Recipe-21pc.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30579-2_ADDON-1pc-Original-Recipe.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30579-2_ADDON-1pc-Original-Recipe.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA129_Hot-Crispy-Boneless-10pcs-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA129_Hot-Crispy-Boneless-10pcs-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30583_Original-Tenders-3pc.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30583_Original-Tenders-3pc.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-32455_Wicked-Wings-2pk.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-32455_Wicked-Wings-2pk.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-32170_Hot-Crispy-Boneless-3pcs.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-32170_Hot-Crispy-Boneless-3pcs.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30707_Original-Tenders-5pcs-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30707_Original-Tenders-5pcs-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA137_Luxe-Lunch-CUP.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA137_Luxe-Lunch-CUP.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-32174_ADDON-6-Hot-Crispy-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-32174_ADDON-6-Hot-Crispy-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30017_Wicked-Wings-3pc.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30017_Wicked-Wings-3pc.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA137_Luxe-Lunch-CUP-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA137_Luxe-Lunch-CUP-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30839_ADDON-4-pcs-Original-Recipe-Chicken-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30839_ADDON-4-pcs-Original-Recipe-Chicken-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30583_Original-Tenders-3pc-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30583_Original-Tenders-3pc-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "I-30658_Wicked-Wings-6pk.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/I-30658_Wicked-Wings-6pk.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA130_Original-Recipe-Chicken-3pcs-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA130_Original-Recipe-Chicken-3pcs-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    },
+    {
+        "filename": "NA158_Luxe-Lunch-SBX-LN.png",
+        "path": "\/home\/hugo\/workspace\/projects\/repo\/projects\/PHP\/work-tools\/library-manager\/assets\/chicken\/NA158_Luxe-Lunch-SBX-LN.png",
+        "mime-type": "image\/png",
+        "subdirectories": "chicken"
+    }
 ]

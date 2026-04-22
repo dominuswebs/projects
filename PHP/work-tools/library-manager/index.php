@@ -10,9 +10,11 @@ require_once "app.php";
 
 
 
-// processFiles(DEV_ASSET_ROOT);
+$assets = processAssets(DEV_ASSET_ROOT);
 
 
-// $db = new AssetDB();
+$db = new AssetDB();
 
-// $db->writeDB($data);
+$db->writeDB($assets);
+
+var_dump($db->readDB());
