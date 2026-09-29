@@ -290,7 +290,7 @@
     
     We cannot remove or edit the bind mount. Bind mounts are fixed at container creation time. So we need to recreate the container with different options.
 
-    By default bind mounts allow the container to write into them, meaning that if we run rm filename in the container, it is gone from the host.
+    By default bind mounts allow the container to write into them, meaning that if we run rm filename in the container, it is gone from the host.docker
 
     Defining a bind mount
 
@@ -388,3 +388,22 @@
                 sudo service docker restart
 
                 docker system prune --all --volumes
+
+# Dockerfile
+
+    Default name - Dockerfile
+
+    Consists of multiple instructions:
+
+        FROM [base image] or [scratch] (We need to copy all files the OS requires) 
+        LABEL [name=my-image] (metadata multiple can be added - they will be added to the image list that can be shown with docker image -ls)
+
+    Build the custom image
+
+        docker build -t [app-tag] (this allows us to use the defined app-tag when running docker commands instead of depending on whatever image id is created from the build ) [build-context-path] (should be our application folder where Dockerfile is)
+            
+            Warning: the entire contents of the specified build context directory are sent to the Docker Engine
+
+    Build and Run in 1 command
+
+        docker build -t my-app . && docker run -it --rm my-app
