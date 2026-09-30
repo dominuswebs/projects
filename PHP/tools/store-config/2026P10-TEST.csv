@@ -1,0 +1,6 @@
+Store Code,Store Name,State,Store Type,Price Tier Day,Price Tier LN,ISM,ISM2,PRI,PRI2,DTM,DTM2,PRO,PRO2,PRO3,PRO4,Garden Banner,Pylon,Tags,Additional Tags,Mall,Cans or Cups,Freeze,Test HNC,Roundel,Preperation,Lozenge,Test 1,Test 2,Test 3,Expected screen count,Actual screen count,Media Test Market,Menu Panel Test Market,"Collin's
+ Stores"
+1100,Cessnock,NSW,FSDT,D5-HIGH,LN5-HIGH,4PL,,,,3PP,3PP,1PP,1PP,,,,,STORETYPE-FSDT   STATE-NSW   TIERDAY-D5-HIGH   TIERLN-LN5-HIGH   EXPOCD-LANE1   EXPOCD-LANE2   DRINKS-CANS,,,,,,,,,,,"EXPOCD-LANE1,EXPOCD-LANE2",13,13,Newcastle,,
+1102,Hurstville Mall,NSW,MCN,D1-LOW,LN1-LOW,4PL,,1PP,,,,,,,,,,STORETYPE-MCN   STATE-NSW   TIERDAY-D1-LOW   TIERLN-LN1-LOW   DRINKS-CANS   CATEGORY-MALL,,STORETYPE-MALL,,,,,,,,,,5,4,,,
+1103,Belconnen,ACT,FSDT,D4-MIDHIGH,LN4-MIDHIGH,5PP,,,,3PP,,,,,,,,STORETYPE-FSDT   STATE-ACT   TIERDAY-D4-MIDHIGH   TIERLN-LN4-MIDHIGH   DRINKS-CANS,,,,,,,,,,,,8,11,Canberra,,
+1104,Nicholls,ACT,FSDT,D3-MID,LN3-MID,5PP,,,,3PP,3PP,,,,,,,STORETYPE-FSDT   STATE-ACT   TIERDAY-D3-MID   TIERLN-LN3-MID   DRINKS-CANS,,,,,,,,,,,,11,11,Canberra,Canberra 1,
