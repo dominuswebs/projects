@@ -66,6 +66,9 @@
         To avoid this we start the container and then use exec to run bash. This can be used by either running the container in detached mode ( -d ), so the shell is free, or
         by using a different terminal window.
 
+        By default, Docker connects the container's stdout/stderr to our terminal when we run it in the foreground. To hide the output, the simplest way is to run the container in detached mode [-d].
+        However, Docker is still collecting the logs. We can view them later with docker logs -f [container-id]
+
 
 
 # Docker commands
@@ -336,7 +339,7 @@
 
     docker cp
 
-        Everything is in the container'swritable layer
+        Everything is in the container's writable layer
         Optimised by Docker for speed
         Prefered in prod
         Any updates need to be copied manually ( more explicit )
@@ -349,14 +352,116 @@
 
 # Dockerfile
 
-    Usually a file in the root of your application named Dockerfile
+    Default name - Dockerfile
 
-    First instruction is FROM (image) or FROM scratch if we want to start from scratch
+    Consists of multiple instructions:
 
+        FROM [base image] or [scratch] (We need to copy all files the OS requires) 
+        
+        LABEL [name=my-image] (metadata multiple can be added - they will be added to the image list that can be shown with docker image -ls)
+
+        COPY [source-path] [destination-path] (copy files and directories from source into the fylesystem of the image)
+
+        ADD [source-path] [destination-path] 
+
+            Similar to COPY, with additional features:
+                
+                Fetching data from remote urls
+
+                Extract archives like gzip, tar, bzip2 (but not zip) automatically
+
+            Both ADD and COPY add a new layer to our image
+
+        CMD (specifies the default command to execute when the container starts. Only the last CMD will take effect. If none, Docker uses the CMD from the parent image)
+
+            Syntax:
+
+                Exec form
+                    
+                    CMD ["executable", "param1", "param2"]
+
+                Shell form (if we need a shell - running ls or any other commands - some overhead)
+
+                    CMD command param1 param2
+
+        ENTRYPOINT - (similar to CMD, defines the default application that executes when the container starts. However, ENTRYPOINT parameters are not overridden by the CLI argumants from docker run)
+
+            Using the dockerfiles/php-example
+                CMD ["php", "./test.php"] - When we run: docker run -it --rm --name run-app php-app - we get the echo output but if we change docker run to: docker run -it --rm --name run-app php-app bash
+                It will run bash instead.
+
+            If we replace CMD with ENTRYPOINT we cannot override it. Useful for standalone applications. 
+                WE can set the entry point to php only so ENTRYPOINT ["php"] and then pass parameters when running the container - docker run -it --rm --name run-app php-app -v - this shows php version
+
+        We can use both ENTRYPOINT and CMD. ENTRYPOINT will the the application and CMD the parameters
+
+            ...
+            ENTRYPOINT ["php"]
+            CMD ["-v"]
+
+        EXPOSE - (serves as a documentation for the ports the container will be using. does not automatically publish ports - usually) 
+
+            EXPOSE [PORT]
+            EXPOSE [PORT]/[PROTOCOL]
+
+                Ex:
+
+                    EXPOSE 80/tcp
+
+            Automatically publishing ports
+
+                Using the -P flag (not -p) with docker run (no manual port mapping - 80:80 for ex.) will publish all ports specified through EXPOSE instructions to random ports on the host machine (usually higher range like 55000). You can find the host port by running docker container ls in a different terminal.
+
+        RUN - (executes commands inside our Docker image layers during the build process)
+
+            Useful for condiguration tasks like installing packages, creating folders, modifying files
+            Each RUN command creates a new layer to the image
+
+            RUN [command]
+                Multiple commands can be chained with &&
+                This also reduces the number of layers and thus the final image size
+
+            IMPORTANT
+
+                A RUN commmand cannot access user input - so if we are installing a package and it has interactive prompts we cannot type y. This requires changing how packages are installed, usually with -y
+
+        WORKDIR - (sets the working directory for the following instructions: ADD, COPY, CMD, RUN, ... - If the directory does not exist, WORKDIR will create it)
+
+            WORKDIR [path]
+
+                Ex:
+
+                    WORKDIR /app
+
+    Build the custom image
+
+        docker build -t [app-tag] (this allows us to use the defined app-tag when running docker commands instead of depending on whatever image id is created from the build ) [build-context-path] (should be our application folder where Dockerfile is)
+            
+            Warning: the entire contents of the specified build context directory are sent to the Docker Engine
+
+    Build and Run in 1 command
+
+        docker build -t my-app . && docker run -it --rm my-app
+    
    ## Build
     
     run docker build [build-context-path] (usually . if we run from the app folder)
     during the build process, the entire contents of the specified build context directory are sent to the Docker Engine
+
+# .dockerignore
+
+    Similar to .gitignore
+    Root of the application
+
+    Wild card * patterns
+
+        data* - excludes all files and folders that start with "data" in the root directory
+        *data - excludes all files and folders that end with "data" in the root directory
+        **/data - excludes all files and folders that named "data" in any subdirectory
+
+# Docker compose
+
+    Docker Compose file is a declarative replacement for manual terminal commands. Instead of typing out long, error-prone docker run commands every time we start our project, we write the configuration once in a YAML file and launch everything with a single command.
 
 
 # Common errors
