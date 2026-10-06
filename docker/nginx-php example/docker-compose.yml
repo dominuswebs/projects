@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    build: . # this tells docker Compose to look for our dockerfile (nginx) allowing us to use a custom image 
     container_name: nginx-php
     ports:
       - "5000:5000"
