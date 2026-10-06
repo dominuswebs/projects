@@ -362,6 +362,16 @@
 
         COPY [source-path] [destination-path] (copy files and directories from source into the fylesystem of the image)
 
+            We can have multiple COPY entries. It might be useful to separate them into files that do not change ( so Docker caches them) and files that keep being updated (like application code)
+
+                Ex:
+
+                ...
+                COPY composer.json composer.lock ./ # we need / to tell Docker that that is a folder since we had files before
+                RUN composer install # or composer update depending on which composer file we want to use (lock or json)
+                COPY . . # copy the all files BUT the important benefit isn't avoiding the duplicate copy. It's keeping expensive   dependency installation in a cacheable layer that isn't invalidated by source-code changes.
+                ...
+
         ADD [source-path] [destination-path] 
 
             Similar to COPY, with additional features:
@@ -447,6 +457,9 @@
     
     run docker build [build-context-path] (usually . if we run from the app folder)
     during the build process, the entire contents of the specified build context directory are sent to the Docker Engine
+
+
+
 
 # .dockerignore
 
