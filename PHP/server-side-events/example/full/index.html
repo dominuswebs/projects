@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SSE Test</title>
+</head>
+<body>
+
+<h1>SSE Consumer</h1>
+
+<div id="messages"></div>
+
+<script>
+const events = new EventSource('events.php');
+
+events.onopen = function () {
+    console.log('SSE connection established');
+};
+
+events.onmessage = function (event) {
+    console.log('Received:', event.data);
+
+    const message = document.createElement('div');
+    message.textContent = event.data;
+
+    document.getElementById('messages').appendChild(message);
+};
+
+events.onerror = function (event) {
+    console.log('SSE connection error', event);
+};
+</script>
+
+</body>
+</html>

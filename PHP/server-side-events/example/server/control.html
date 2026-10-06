@@ -1,0 +1,26 @@
+<form id="messageForm">
+    <input type="text" name="message" id="message">
+    <button type="submit">Send</button>
+</form>
+
+<script>
+const events = new EventSource('events.php');
+
+events.onmessage = function (event) {
+    console.log('SSE:', event.data);
+};
+
+document.getElementById('messageForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const message = document.getElementById('message').value;
+
+    await fetch('handler.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message })
+    });
+});
+</script>
