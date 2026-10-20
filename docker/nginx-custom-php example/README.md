@@ -18,7 +18,41 @@ Managing dependencies
 
     Install after starting the container: Run composer require ... or composer install using docker exec. Convenient while developing.
 
-    Install during image building: Run composer install in your Dockerfile. This is generally more reproducible for deployment and production environments.
+    Install during image building: Run composer install in your Dockerfile. This is generally more reproducible for deployment and production environments. We manage dependencies locally by running composer require <package> inside the local Docker container running composer to generate our composer.json and composer.lock files.
+
+        Example dockerfile
+
+            FROM php:8.3-cli AS builder
+
+            # Install system dependencies required for Composer/Extensions
+            RUN apt-get update && apt-get install -y \
+                git \
+                unzip \
+                libzip-dev \
+                && docker-php-ext-install zip
+
+            # Install Composer securely
+            COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
+
+            WORKDIR /app
+
+            # Copy ONLY composer files first to leverage Docker layer caching
+            COPY composer.json composer.lock ./
+
+            # Install dependencies (optimized for production)
+            RUN composer install \
+                --no-dev \
+                --no-interaction \
+                --plugins-api=2 \
+                --prefer-dist \
+                --no-scripts \
+                --no-autoloader
+
+            # Copy the rest of your application code
+            COPY . .
+
+            # Run the autoloader optimization now that all source files are present
+            RUN composer dump-autoload --no-dev --optimize
 
     For your current learning and development setup, installing dependencies inside the running container is perfectly reasonable.
 
