@@ -1,0 +1,29 @@
+# Custom PHP image
+# Base image with PHP 8.5 and FPM
+FROM php:8.5-fpm
+
+# Install system dependencies and PHP extensions
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libzip-dev \
+    && docker-php-ext-install pdo pdo_mysql zip
+
+# Install Composer from the official image
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Set the working directory
+WORKDIR /var/www/html
+
+# Copy dependency definitions
+COPY ./src/composer.json ./src/composer.lock ./
+
+# Install dependencies
+RUN composer install \
+    --no-dev \
+    --no-interaction \
+    --prefer-dist \
+    --optimize-autoloader
+
+# Copy application source
+COPY ./src/ ./

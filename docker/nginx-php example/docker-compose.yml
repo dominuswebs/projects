@@ -25,6 +25,14 @@ services:
       - /home/hugo/workspace/designintoto/git/Framework/DDMB-Framework:/var/www/html/content
     networks:
       - app-network
+    environment:
+      # these values will be available 
+      # // 1. Using getenv()
+      # $db_host = getenv('DB_HOST');
+      # // 2. Using Superglobals
+      # $api_key = $_ENV['API_KEY'] ?? $_SERVER['API_KEY']; 
+      - DB_HOST=db_server
+      - API_KEY=secret_value_123
 networks:
   app-network:
     driver: bridge
