@@ -25,9 +25,9 @@
 
     A class:
 
-    implements Interface
+        implements Interface
 
-    use Trait
+        use Trait
 
     interface LoggerInterface
     {

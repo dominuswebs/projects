@@ -1,0 +1,3 @@
+module simple-projects/investment-calculator
+
+go 1.27.3
